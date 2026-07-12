@@ -1,0 +1,4 @@
+interface:
+  display_name: "YD Academic PPT"
+  short_description: "生成可编辑学术报告、主题路演与全页AI海报型PPT"
+  default_prompt: "Use $yd-academic-ppt to create an academic deck, editable theme-led pitch, or extreme full-image poster deck based on my brief, with PPTX and PDF output."
