@@ -42,7 +42,7 @@ Give 55–70% of the slide to the chart. Add one highlighted inference and 1–3
 
 ### J. Table / matrix
 
-Use for exact comparison across at least three repeated dimensions. Limit columns to what can be read at presentation distance. Highlight the conclusion, not every cell.
+Use for exact comparison across at least three repeated dimensions. Limit columns to what can be read at presentation distance. Place the table inside a rounded editorial card with a navy title/header band and compact zebra rows. When the table shares a page with a chart or interpretation, target roughly 35–45% of the content width instead of stretching it edge-to-edge. Highlight the conclusion, not every cell.
 
 ### K. Formula / model explanation
 
@@ -72,6 +72,7 @@ Use 3–5 claims or actions. Each should answer “so what?” Include limitatio
 - Keep a minimum of 8–12% of the canvas visually quiet.
 - A card grid is justified only when items are parallel and independently scannable.
 - If a table needs tiny type, split it, simplify dimensions, or move the full table to an appendix.
+- In template-fidelity mode, do not confuse whitespace with quality: the reference is information-rich. Use the available central canvas deliberately with 2–4 aligned regions, supporting icons/labels, and a takeaway strip when appropriate. Large unused zones on ordinary content slides are a defect.
 
 ## Rhythm rules
 
@@ -80,4 +81,3 @@ Use 3–5 claims or actions. Each should answer “so what?” Include limitatio
 - Place a chart/figure-led slide at least every 3–5 slides when evidence supports it.
 - Use section dividers sparingly; a strong title and eyebrow often provide enough orientation.
 - Close each section with a synthesis, decision rule, or implication rather than a decorative transition.
-

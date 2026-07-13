@@ -23,6 +23,19 @@ Score each category 0–2. Do not deliver below 18/20, and do not allow a zero i
 4. Run overflow/slide-bound tests.
 5. Export PDF and render representative PDF pages, including the densest slide, a chart/table slide, and the final slide.
 6. Compare PPTX and PDF for fonts, line breaks, equations, charts, and page edges.
+7. For the academic route, compare the montage and at least three full-size slides against `academic-template-fidelity.md`. Color match alone does not pass.
+
+## Academic template-fidelity gate
+
+All seven checks must pass before delivery:
+
+1. A substantial navy top-left banner and a full-width navy/red footer are present on applicable slides.
+2. The title uses the serif-number-badge-red-underline lockup at reference-like scale.
+3. Repeated cards have visibly rounded corners and consistent padding; no accidental square dashboard boxes remain.
+4. Tables use compact editorial construction rather than a plain spreadsheet grid.
+5. The central layout has reference-like density and semantic iconography without crowding.
+6. The header, title block, content grid, takeaway strip, and footer align to a common geometry.
+7. Source branding/watermarks are replaced, while the structural identity is preserved.
 
 ## Final checklist
 
@@ -36,6 +49,7 @@ Score each category 0–2. Do not deliver below 18/20, and do not allow a zero i
 - Equations and symbols render correctly; all symbols are defined.
 - Citations are readable and traceable.
 - Footers, section labels, and page markers are correct.
+- Top and bottom color blocks are not missing, reduced to hairlines, or detached from the slide edges.
 - No source watermark, accidental branding, placeholders, or production notes remain.
 - PPTX and PDF filenames clearly identify version.
 

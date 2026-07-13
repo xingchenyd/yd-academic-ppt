@@ -52,9 +52,11 @@ Extract figures/tables from provided sources at adequate resolution. Rebuild cha
 
 Create global theme tokens, header/footer helpers, title treatments, card styles, table styles, chart colors, spacing constants, and page-number logic. Use these primitives consistently. Build central compositions from content needs rather than forcing a single repeated grid.
 
+For the academic route, do not generate the full deck immediately. First build one representative dense calibration slide using `academic-template-fidelity.md`. Render it and verify the signature top banner, bottom band, title lockup, rounded components, table/card morphology, and content density. Freeze the corrected helpers only after this slide passes; then build the rest of the deck.
+
 ## 6. Validate version 1
 
-Render every slide. Inspect each at full size and inspect a montage for rhythm. Run overflow checks. Export PDF, render the PDF, and compare representative slides against the PPTX render. Apply the full rubric in `qa-rubric.md`.
+Render every slide. Inspect each at full size and inspect a montage for rhythm. Run overflow checks. Export PDF, render the PDF, and compare representative slides against the PPTX render. For an academic deck, compare at least three full-size slides and the montage with `academic-template-fidelity.md`; missing frame elements or generic square/table styling require regeneration. Apply the full rubric in `qa-rubric.md`.
 
 ## 7. Deliver and elicit
 

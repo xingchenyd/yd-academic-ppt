@@ -15,6 +15,7 @@ Read these references before planning:
 
 - [workflow.md](references/workflow.md) for the end-to-end two-version process.
 - [design-system.md](references/design-system.md) for visual tokens and typography.
+- [academic-template-fidelity.md](references/academic-template-fidelity.md) whenever the academic editorial route is selected; it defines the mandatory frame, title anatomy, rounded components, table construction, and visual comparison gates distilled from the reference images.
 - [layout-grammar.md](references/layout-grammar.md) for page archetypes and density rules.
 - [intake-and-iteration.md](references/intake-and-iteration.md) for questions and revision logic.
 - [qa-rubric.md](references/qa-rubric.md) before each delivery.
@@ -37,7 +38,7 @@ Read these references before planning:
 
 Choose one primary route before outlining:
 
-- **Academic editorial — default:** use the reference-inspired warm off-white, navy, dark-red, structured-card system for academic reports, paper reviews, defenses, courses, formal reports, and unspecified topics.
+- **Academic editorial — default:** use the reference-inspired warm off-white, navy, dark-red, structured-card system for academic reports, paper reviews, defenses, courses, formal reports, and unspecified topics. Unless the user requests a looser adaptation, treat this as **template-fidelity mode**: reproduce the signature top-left navy banner, top-right traits, bottom navy/red navigation band, numbered serif title lockup, red underline, rounded panels, and compact editorial tables on every applicable slide. Palette similarity alone is not sufficient.
 - **Theme-led pitch:** trigger when the prompt indicates a hackathon, startup, product demo, game, coffee/food brand, cultural-tourism product, launch, campaign, or investor/judge pitch. Build a project-specific visual world instead of repainting the academic template.
 - **Poster-led impact / full-image mode:** trigger only when the user explicitly asks for a promotional poster, image-generated full slides, extreme visual impact, a highly infectious hackathon pitch, dense poster composition, or abundant artistic lettering. Generate every slide as one complete 16:9 AI image containing the entire background, composition, illustration, typography, labels, diagrams, decorative elements, and page chrome. This mode intentionally sacrifices editability for maximum visual unity and impact.
 
@@ -66,17 +67,19 @@ If the user says the talk is longer, supplies a page count, or gives a content-h
 
 ## YD visual identity
 
-Treat the reference style as the default academic editorial system, not a rigid template:
+Treat the reference style as the default academic editorial system with a stable frame and flexible center:
 
 - Use a warm off-white canvas, deep navy as the structural color, restrained dark red for contrast and decisions, and a small amount of muted gold only when appropriate.
-- Use large, dark, high-contrast Chinese titles with a compact numbered badge and short red underline/accent.
-- Use thin borders, low-radius cards, flat fills, precise alignment, and consistent icon containers. Avoid gradients, glass effects, neon, excessive shadows, and decorative stock imagery.
-- Keep a slim branded header and footer when the deck benefits from report-series continuity. Remove or simplify them for thesis defenses, conferences, or institution-branded decks when they reduce usable space.
+- Use large, high-contrast navy Chinese **serif** titles by default, with a compact numbered badge aligned to the title baseline and a short, thick red underline/accent. A generic sans title is a deliberate exception, not the default.
+- Use thin borders, visibly rounded cards, flat fills, precise alignment, and consistent circular icon containers. Avoid square dashboard boxes, gradients, glass effects, neon, excessive shadows, and decorative stock imagery.
+- Keep the signature top and bottom color-block frame on normal academic slides. Remove or replace it only when the user supplies an institution template or explicitly requests a frameless/conference style.
 - Use cards for distinct semantic units, not as automatic decoration. A slide may be flat, chart-led, figure-led, or table-led when that communicates better.
 - Use navy/red alternation to encode category, contrast, sequence, or risk—not merely to add color.
 - Never fall back to plain black Song type as the visible design system. Use theme-appropriate font families, weights, colors, emphasis, and spacing. Academic serif titles may be used only when deliberately styled in navy/red with strong weight and hierarchy; body copy should normally use a clean sans-serif Chinese font.
 
 Follow the exact tokens and exceptions in [design-system.md](references/design-system.md).
+
+The first academic slide must be rendered as a **calibration slide** before the full deck is built. Compare it against [academic-template-fidelity.md](references/academic-template-fidelity.md). Do not proceed while any of these are missing: substantial top-left navy banner, full bottom navy/red band, serif title lockup, red underline, rounded card treatment, or reference-like information density.
 
 ## Content-to-layout routing
 
@@ -114,9 +117,10 @@ Follow [visual-generation-policy.md](references/visual-generation-policy.md) exa
 4. Lock a private storyline and design system, then draft a storyboard containing slide number, takeaway title, purpose, evidence, layout family, visual anchor, native-text plan, image-generation need, and speaker-time estimate.
 5. Check total timing and narrative gaps before implementation.
 6. Implement with the `Presentations` skill using a reusable theme and layout helpers rather than one-off coordinates.
-7. Render every slide, inspect full-size pages, fix layout defects, and export the PDF.
-8. Run the rubric in [qa-rubric.md](references/qa-rubric.md).
-9. Deliver both files and a concise summary of assumptions plus targeted refinement questions.
+7. For the academic route, render one representative content slide first and pass the frame/title/component calibration gate. Then implement the remaining slides.
+8. Render every slide, inspect full-size pages, fix layout defects, and export the PDF.
+9. Run the rubric in [qa-rubric.md](references/qa-rubric.md), including the reference-fidelity comparison for academic decks.
+10. Deliver both files and a concise summary of assumptions plus targeted refinement questions.
 
 ## Revision procedure
 

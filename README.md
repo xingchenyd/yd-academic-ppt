@@ -8,6 +8,7 @@ It turns topic descriptions, papers, datasets, notes, and existing decks into an
 
 - Argument-led presentation planning instead of mechanical document conversion.
 - A formal default academic system built around warm off-white, deep navy, and restrained dark red.
+- Template-fidelity calibration for the signature navy top banner, navy/red footer, numbered serif title lockup, rounded cards, compact editorial tables, and reference-like density.
 - Automatic theme-led visual routing for hackathons, startups, games, coffee/food brands, cultural products, and other project pitches.
 - Default pacing tiers of about 8 slides for 3 minutes, 12 for 5 minutes, and 20 for 10 minutes.
 - Controlled image generation for text-free hero visuals and thematic assets, while ordinary presentation text remains editable.
@@ -26,6 +27,7 @@ yd-academic-ppt/
 ├── agents/
 │   └── openai.yaml
 └── references/
+    ├── academic-template-fidelity.md
     ├── design-system.md
     ├── duration-and-scenarios.md
     ├── evidence-and-research.md
