@@ -1,6 +1,6 @@
 ---
 name: yd-academic-ppt
-description: "Create, redesign, or iteratively refine polished 16:9 academic, research, teaching, defense, journal-club, technical, policy, hackathon, startup, product-pitch, and formal professional PowerPoint decks. Default to the YD academic editorial style with warm off-white canvas, navy/red hierarchy, editable styled typography, modular evidence layouts, and rigorous QA; automatically switch to an editable theme-specific pitch system for games, coffee, cultural products, and startups, or an extreme non-editable full-image poster mode when the user explicitly requests complete ImageGen slides, abundant artistic lettering, or maximum promotional impact. Use when the user invokes yd-academic-ppt, supplies papers/data/notes for a deck, or requests PPTX/PDF output followed by targeted refinement."
+description: "Create, redesign, or iteratively refine polished 16:9 academic, research, teaching, defense, journal-club, technical, policy, hackathon, startup, product-pitch, and formal professional decks through a three-concept visual workflow. First lock one outline and storyline, then use ImageGen to produce three complete full-deck contact-sheet previews in distinct but internally consistent visual systems. After the user selects one, reconstruct academic decks into highly faithful editable PPTX objects, or assemble creative/hackathon full-slide images directly into PPTX; export PDF, ask targeted questions, and produce a refined version 2. Use when the user invokes yd-academic-ppt, supplies papers/data/notes, asks for multiple visual directions, or requests PPTX/PDF delivery."
 ---
 
 # YD Academic PPT
@@ -14,6 +14,8 @@ Use the built-in `Presentations` skill for implementation and slide QA. Use the 
 Read these references before planning:
 
 - [workflow.md](references/workflow.md) for the end-to-end two-version process.
+- [three-concept-preview.md](references/three-concept-preview.md) for the mandatory outline lock and three full-deck contact-sheet previews.
+- [image-to-editable-reconstruction.md](references/image-to-editable-reconstruction.md) after an academic preview direction is selected.
 - [design-system.md](references/design-system.md) for visual tokens and typography.
 - [academic-template-fidelity.md](references/academic-template-fidelity.md) whenever the academic editorial route is selected; it defines the mandatory frame, title anatomy, rounded components, table construction, and visual comparison gates distilled from the reference images.
 - [layout-grammar.md](references/layout-grammar.md) for page archetypes and density rules.
@@ -27,22 +29,23 @@ Read these references before planning:
 ## Operating contract
 
 1. Infer as much as possible from the user's prompt and source files. Do not make the user restate information already available.
-2. Before version 1, ask only questions that block a credible deck, normally no more than three. Otherwise state assumptions briefly and proceed.
-3. Create an audience-specific narrative and slide architecture before drawing slides.
-4. Match the output contract to the selected route. Academic editorial and theme-led pitch routes build editable `.pptx` files with native text and data objects. Poster-led impact deliberately builds full-slide AI images and packages them into an image-based `.pptx`; no element-level editability is promised.
-5. Export a matching `.pdf` preview and inspect both outputs.
-6. Deliver version 1 with both files, then ask a tailored refinement questionnaire based on concrete uncertainties found during authoring.
-7. After the user answers, revise the same deck into version 2, re-export the PDF, rerun full QA, and deliver both files. Avoid another broad questionnaire unless a new high-impact ambiguity appears.
+2. Before visual generation, ask only questions that block a credible outline, normally no more than three. Otherwise state assumptions briefly and proceed.
+3. Present the outline/slide map first. Lock one audience-specific narrative, exact slide order, takeaway titles, claims, data, evidence, and timing ledger. Pause for outline confirmation unless the user has explicitly authorized automatic continuation.
+4. After outline confirmation and before any PPTX or PDF, generate **three complete full-deck visual concepts** from that same story lock and deliver three contact-sheet images—one image per concept containing every slide in order. These are PNG/JPEG preview boards, not PDF files.
+5. Pause for the user's A/B/C selection or a precise hybrid instruction. Do not silently choose a direction and continue.
+6. Match the selected route: academic decks are reconstructed from the approved full-slide images into highly faithful editable native objects; hackathon/poster/high-impact creative decks keep the approved full-slide images and assemble them directly into PPTX. An editable creative pitch is an explicit exception.
+7. Export a matching `.pdf` only after the selected formal PPTX is built, inspect both outputs, and deliver version 1.
+8. Ask a tailored refinement questionnaire and propose concrete improvements. After the user answers, revise into version 2, re-export PDF, rerun full QA, and deliver both files.
 
 ## Mode routing
 
 Choose one primary route before outlining:
 
 - **Academic editorial — default:** use the reference-inspired warm off-white, navy, dark-red, structured-card system for academic reports, paper reviews, defenses, courses, formal reports, and unspecified topics. Unless the user requests a looser adaptation, treat this as **template-fidelity mode**: reproduce the signature top-left navy banner, top-right traits, bottom navy/red navigation band, numbered serif title lockup, red underline, rounded panels, and compact editorial tables on every applicable slide. Palette similarity alone is not sufficient.
-- **Theme-led pitch:** trigger when the prompt indicates a hackathon, startup, product demo, game, coffee/food brand, cultural-tourism product, launch, campaign, or investor/judge pitch. Build a project-specific visual world instead of repainting the academic template.
-- **Poster-led impact / full-image mode:** trigger only when the user explicitly asks for a promotional poster, image-generated full slides, extreme visual impact, a highly infectious hackathon pitch, dense poster composition, or abundant artistic lettering. Generate every slide as one complete 16:9 AI image containing the entire background, composition, illustration, typography, labels, diagrams, decorative elements, and page chrome. This mode intentionally sacrifices editability for maximum visual unity and impact.
+- **Creative pitch / hackathon — image-based by default:** for hackathons, game concepts, creative products, campaigns, coffee/food brands, cultural-tourism products, launches, and high-energy judge pitches, build a project-specific visual world. After selection, assemble the approved full-slide images directly into PPTX for maximum unity and impact. Reconstruct into editable objects only when the user explicitly prioritizes editability.
+- **Poster-led impact / extreme full-image mode:** trigger when the user requests promotional-poster intensity, abundant artistic lettering, dense visual layering, or maximum stage impact. It uses the same three-concept selection stage but pushes ImageGen density and art direction further.
 
-Do not mix the academic chrome with a theme-led pitch unless the user explicitly wants a hybrid. Keep one coherent design language per deck. Read [poster-impact-mode.md](references/poster-impact-mode.md) whenever full-image mode triggers.
+Do not mix the academic chrome with a creative pitch unless the user explicitly wants a hybrid. Keep one coherent design language per concept and deck. Read [poster-impact-mode.md](references/poster-impact-mode.md) for creative image-based output.
 
 ## Duration defaults
 
@@ -79,7 +82,7 @@ Treat the reference style as the default academic editorial system with a stable
 
 Follow the exact tokens and exceptions in [design-system.md](references/design-system.md).
 
-The first academic slide must be rendered as a **calibration slide** before the full deck is built. Compare it against [academic-template-fidelity.md](references/academic-template-fidelity.md). Do not proceed while any of these are missing: substantial top-left navy banner, full bottom navy/red band, serif title lockup, red underline, rounded card treatment, or reference-like information density.
+For the academic route, the three ImageGen concepts are the visual exploration stage. After selection, reconstruct one representative dense slide as a **calibration slide** before rebuilding the remaining pages. Compare it with the selected full-slide image and [academic-template-fidelity.md](references/academic-template-fidelity.md). Do not proceed while the silhouette, frame, title anatomy, rounded components, table morphology, typography, or density visibly drift.
 
 ## Content-to-layout routing
 
@@ -100,27 +103,27 @@ Avoid repeating the same silhouette on more than two consecutive content slides 
 
 ## Image and text policy
 
-- Image generation is allowed for text-free backgrounds, hero scenes, characters, product worlds, textures, decorative motifs, and thematic visual anchors.
-- Generate visuals around planned text-safe areas. Add ordinary slide text afterward as native PowerPoint text.
-- Do not ask an image model to render paragraphs, labels, tables, charts, citations, page numbers, or ordinary headings.
+- At concept stage, use ImageGen for complete 16:9 slide compositions in all three routes. Read [three-concept-preview.md](references/three-concept-preview.md).
+- For academic concept boards, ImageGen controls the entire visual composition; exact factual text may be added as a rasterized overlay after generation so titles, claims, symbols, and numbers remain correct. Do not treat AI-rendered microtext as evidence.
+- After academic selection, use the approved images only as visual targets. Rebuild ordinary text, tables, charts, formulas, lines, simple geometry, page furniture, and data-bound objects natively. Retain complex illustration/photo/texture regions as separately movable image assets when native reconstruction would reduce fidelity.
 - In poster-led impact mode, permit extensive AI-rendered display lettering, short labels, badges, and integrated poster copy as part of the full-slide image. Follow the exact-copy and full-slide regeneration rules in [poster-impact-mode.md](references/poster-impact-mode.md).
 - Use one dominant generated visual idea per slide, normally occupying one purposeful zone; do not scatter many unrelated generated stickers or images across the page.
 - Keep charts, UI screenshots, paper figures, logos, and evidence faithful to their sources. Do not generate fake data, fake interfaces, or fake logos.
 
 Follow [visual-generation-policy.md](references/visual-generation-policy.md) exactly.
 
-## Version 1 procedure
+## Concept-selection and version 1 procedure
 
 1. Inspect all supplied files and images completely enough to understand content and visual constraints.
 2. Write a private brief covering audience, occasion, duration/page target, required sections, evidence standard, editable-content needs, institutional identity, output language, mode route, typography direction, palette, image-generation allowance, logo policy, and pagination system.
 3. Research only what is necessary; keep a source ledger.
-4. Lock a private storyline and design system, then draft a storyboard containing slide number, takeaway title, purpose, evidence, layout family, visual anchor, native-text plan, image-generation need, and speaker-time estimate.
-5. Check total timing and narrative gaps before implementation.
-6. Implement with the `Presentations` skill using a reusable theme and layout helpers rather than one-off coordinates.
-7. For the academic route, render one representative content slide first and pass the frame/title/component calibration gate. Then implement the remaining slides.
-8. Render every slide, inspect full-size pages, fix layout defects, and export the PDF.
-9. Run the rubric in [qa-rubric.md](references/qa-rubric.md), including the reference-fidelity comparison for academic decks.
-10. Deliver both files and a concise summary of assumptions plus targeted refinement questions.
+4. Produce and show the outline/slide map. Pause for confirmation unless the user already said to proceed automatically; lock the story after correcting any issue.
+5. Create three materially distinct style bibles while holding the story lock fixed. Generate every slide for A, B, and C, then compose three full-deck contact-sheet images. Run the concept-board QA and deliver the three boards plus a concise difference table.
+6. Wait for selection. If the user requests a hybrid, state exactly which attributes come from which concept and keep one coherent final system.
+7. For academic output, follow [image-to-editable-reconstruction.md](references/image-to-editable-reconstruction.md), pass a one-slide calibration, then rebuild all slides. For creative/hackathon output, place each approved full-slide image edge-to-edge in PPTX.
+8. Render every slide, inspect full-size pages and montage, run technical/fidelity QA, and export the PDF.
+9. Deliver version 1 PPTX + PDF, then ask targeted questions and propose high-value improvements.
+10. Apply the answers to version 2, rerun complete QA, and deliver PPTX + PDF.
 
 ## Revision procedure
 
@@ -133,10 +136,10 @@ Translate the user's answers into a private change list grouped by content, stru
 - No unsupported factual claim, invented citation, fabricated number, or unlabeled inference.
 - No low-contrast gray body copy, washed-out fonts, or color-only meaning.
 - No unresolved placeholders, watermarks, template-brand remnants, or accidental source branding.
-- No screenshot of text when editable text can be used.
+- In the final academic deck, no screenshot of ordinary text, tables, charts, formulas, or simple shapes when they can be rebuilt editably without meaningful fidelity loss.
 - No chart without units, labels, source/context, and an explicit takeaway.
 - No PDF handoff before visual comparison with the PPTX render.
 
 ## Output naming
 
-Use descriptive versioned names such as `<topic>_YD_V1.pptx`, `<topic>_YD_V1_preview.pdf`, `<topic>_YD_V2.pptx`, and `<topic>_YD_V2_preview.pdf`. Honor the user's filename when specified.
+Use `<topic>_outline.txt`, `<topic>_concept_A_contactsheet.png`, `<topic>_concept_B_contactsheet.png`, and `<topic>_concept_C_contactsheet.png` before selection. After selection use `<topic>_YD_V1.pptx`, `<topic>_YD_V1_preview.pdf`, `<topic>_YD_V2.pptx`, and `<topic>_YD_V2_preview.pdf`. Honor the user's filename when specified.

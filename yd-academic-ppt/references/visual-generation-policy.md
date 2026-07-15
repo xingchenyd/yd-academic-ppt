@@ -1,10 +1,14 @@
 # Visual generation and editable-text policy
 
-## Default contract
+## Two-stage contract
 
-Image generation is allowed, but ordinary information text remains native PowerPoint text. Plan the text first, reserve a text-safe region, generate the visual without words, then add styled native text.
+At concept stage, ImageGen is the principal full-page art director for all routes. At final stage, output rules diverge:
 
-Native editable text includes:
+- academic: selected images become reconstruction targets; factual information is rebuilt natively;
+- hackathon/creative/poster: selected images remain the final full-slide visuals and are assembled directly;
+- editable creative pitch: reconstruct only when explicitly requested.
+
+In final academic output, native editable information includes:
 
 - titles and subtitles;
 - paragraphs and bullets;
@@ -14,28 +18,24 @@ Native editable text includes:
 
 Do not default to black Song typography. Select a type system for the route and use purposeful color, weight, size, alignment, tracking, and emphasis. Verify that chosen fonts are installed or use safe fallbacks.
 
-## Appropriate image-generation targets
+## Full-page academic concept exception
 
-- text-free hero scenes and topic backgrounds;
-- characters, environments, objects, textures, and thematic motifs;
-- decorative corner elements or a single focal illustration;
-- project-world imagery for games, coffee/food brands, cultural tourism, creative apps, and campaigns;
-- isolated transparent assets when they integrate better than a full background.
+Before selection, generate each academic slide as a complete 16:9 visual composition. ImageGen may create the frame, background, panels, visual hierarchy, illustrations, decorative geometry, and proposed typography. Use exact native/raster overlays on the preview image when necessary to prevent malformed factual text. The preview is a design target, not the final evidence artifact.
 
-Generate with composition instructions that leave clean negative space where native text will sit. Avoid important visual detail behind paragraphs.
+After selection, follow `image-to-editable-reconstruction.md`. Do not leave AI-rendered paragraphs, numerical tables, equations, citations, or charts as raster content in the final academic deck when native reconstruction is feasible.
 
-## Forbidden default targets
+## Accuracy prohibitions
 
-Do not generate:
+Never allow ImageGen to invent:
 
-- paragraphs, ordinary headings, labels, page numbers, or citations inside an image;
-- charts, tables, numerical dashboards, equations, or research results that must be exact;
 - fake logos, fake screenshots, fake app interfaces, fake papers, or fabricated evidence;
 - a collage of many unrelated AI assets merely to fill empty space.
 
-## Artistic display lettering exception outside full-image mode
+AI-generated charts/tables may appear only as non-evidentiary composition placeholders in concept boards. Replace them with exact source-bound native objects in final academic output.
 
-For academic editorial and theme-led editable pitch routes, allow AI-rendered words only when the user explicitly requests artistic lettering or comparable high-impact treatment.
+## Artistic display lettering
+
+Academic concepts may explore stylized display lettering, but final academic titles should normally be reconstructed as editable type. Keep generated lettering as an image only when the user explicitly accepts that local editability exception and every glyph is correct.
 
 - Limit generated lettering to one short title, slogan, or logo-like wordmark per selected slide.
 - Verify every character against the approved wording at full resolution.
@@ -44,9 +44,9 @@ For academic editorial and theme-led editable pitch routes, allow AI-rendered wo
 - Record the exact wording in speaker notes or the private storyboard as the source of truth.
 - Do not use generated lettering on every slide; reserve it for cover, section impact, or a decisive closing page.
 
-## Full-image poster mode override
+## Creative full-image final output
 
-When poster-led impact/full-image mode triggers, the constraints above are intentionally overridden:
+For hackathon/creative/poster output, the selected concept is intentionally retained:
 
 - Generate the complete slide as one unified 16:9 bitmap.
 - Permit extensive artistic titles, integrated labels, badges, visualized steps, stylized UI-like panels, and decorative microcopy inside the generated image.

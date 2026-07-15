@@ -2,7 +2,7 @@
 
 ## Mode contract
 
-This is an intentionally extreme image-generation route for promotional posters, high-energy hackathon pitches, creative product launches, game concepts, campaign decks, and other cases where the user explicitly prioritizes visual impact over editability.
+This is the full-image final-output route for hackathon pitches, creative product launches, game concepts, campaign decks, and promotional presentations. Normal creative decks may use controlled density; the intentionally extreme poster treatment is a stronger sub-mode for users who prioritize maximum visual impact over restraint.
 
 Generate every final slide as one complete 16:9 AI-rendered page image. The bitmap contains everything visible:
 
@@ -16,16 +16,16 @@ Do not reconstruct the approved page with PowerPoint objects. Assemble each appr
 
 ## Trigger boundary
 
-Use this mode only when the user explicitly requests one or more of:
+Use image-based assembly by default for hackathon and creative pitch routes. Escalate to the **extreme poster** treatment only when the user explicitly requests one or more of:
 
 - poster-like or promotional full-slide visuals;
 - very strong visual impact or infectious stage presence;
 - full-page ImageGen output;
 - abundant artistic lettering and integrated visual text;
 - a style comparable to a high-energy hackathon show deck, game poster, campaign launch, or visual concept deck;
-- non-editable output is acceptable.
+- non-editable output and maximum visual density are acceptable.
 
-Do not trigger it merely because the topic is a startup or hackathon. A normal project pitch remains in editable theme-led pitch mode unless the prompt asks for the full-image poster treatment.
+A normal startup/business presentation that is formal, investor-document-like, or explicitly editable may instead use editable reconstruction. Do not assume every business deck needs extreme poster density.
 
 ## Production chain
 
@@ -35,10 +35,10 @@ Create and preserve a private production package:
 2. **Storyline:** hook → tension/opportunity → concept → core experience → mechanism/demo → differentiation → proof → impact → roadmap/ask → closing.
 3. **Copy lock:** approve or infer the exact short text for every page before generation. Reduce prose into poster-scale phrases, but preserve required terminology and numbers.
 4. **Design system:** visual world, palette, type personality, composition rhythm, image style, recurring motifs, logo/header/footer treatment, density, and negative constraints.
-5. **Storyboard:** page role, focal object, dominant headline, supporting labels, composition, visual hierarchy, generated elements, continuity cue, and QA risks.
-6. **Long prompt:** write one highly specific prompt per slide using the structure below.
-7. **Generation:** generate each full slide as one image at 16:9, preferably 1920×1080 or higher.
-8. **QA and repair:** inspect at full resolution. Use image editing or regenerate the complete slide when any visual or textual defect appears.
+5. **Storyboard/story lock:** page role, exact title/copy, focal object, supporting labels, evidence, continuity cue, and QA risks. This content remains identical across concepts.
+6. **Three visual systems:** create A/B/C style bibles and follow `three-concept-preview.md` to generate three complete decks and contact sheets.
+7. **Selection:** pause for the user's choice or explicit hybrid; do not assemble a final PPTX before selection.
+8. **Full-resolution repair:** inspect every selected image. Use image editing or regenerate the complete slide when any visual/textual defect appears.
 9. **Assembly:** place each approved image edge-to-edge on a 16:9 slide without overlays, margins, cropping, or letterboxing; export PPTX and PDF.
 
 ## Long-prompt structure
@@ -94,4 +94,3 @@ Extensive generated text is allowed in this mode, including artistic Chinese tit
 - Palette, rendering style, typography personality, chrome, and motif language remain consistent.
 - The cover and closing feel intentionally designed and stage-ready.
 - The PPTX contains one full-page image per slide and the PDF visually matches it.
-

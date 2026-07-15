@@ -1,6 +1,6 @@
 # Intake and iteration
 
-## Before version 1
+## Before the three concepts
 
 Infer answers from the prompt and files first. Ask only blocking questions, normally no more than three. High-impact unknowns include:
 
@@ -14,7 +14,11 @@ Infer answers from the prompt and files first. Ask only blocking questions, norm
 
 If the user does not answer a non-blocking question, choose a sensible default and state it briefly.
 
-## After version 1
+## After the three contact sheets
+
+Ask the user to select A, B, C, or a precise hybrid. Summarize each in one sentence and recommend one based on audience/occasion. If the user chooses a hybrid, confirm only unresolved conflicts—for example dark vs light canvas, serif vs sans title, restrained vs dense illustration. Do not reopen the storyline unless the user asks for content changes.
+
+## After formal version 1
 
 Ask 5–9 tailored questions in one organized set. Do not repeat known facts. Point to concrete choices seen in version 1 and provide a recommended default where helpful. Select from:
 
@@ -43,7 +47,8 @@ Ask 5–9 tailored questions in one organized set. Do not repeat known facts. Po
 - Should navy/red remain fixed, or adapt to an institution palette?
 - Are there figures that must remain editable or be redrawn?
 - For a theme-led pitch, does the chosen visual world feel specific to the project rather than generically “cool”?
-- Should the result remain an editable theme-led pitch, or intentionally switch to non-editable full-image poster mode with all typography and elements generated into each slide?
+- For academic reconstruction, are any complex visual assets required to become separate image objects beyond the current layer split?
+- For creative output, should any individual slide be regenerated at higher impact while preserving the chosen campaign style?
 
 ### Delivery constraints
 

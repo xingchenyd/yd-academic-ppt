@@ -1,4 +1,4 @@
-# End-to-end workflow
+# End-to-end workflow: outline → three concepts → selection → V1 → V2
 
 ## 1. Frame the assignment
 
@@ -10,7 +10,7 @@ Extract or infer:
 - Default page target: 8 slides for 3 minutes, 12 for 5 minutes, and 20 for 10 minutes unless the prompt overrides it.
 - Topic boundary, required sections, forbidden content, language, institution, and author details.
 - Source hierarchy: user files first, then authoritative external sources.
-- Deliverables: editable PPTX, PDF preview, notes, handout, or source appendix.
+- Final deliverables: PPTX, PDF preview, notes, handout, or source appendix. Preliminary deliverables are the outline and three contact-sheet images.
 
 Ask at most three pre-build questions only if the missing answer changes the deck substantially. Otherwise record an assumption and proceed.
 
@@ -31,7 +31,7 @@ Write one deck thesis and one audience outcome. First choose academic editorial,
 
 Use section dividers only when they improve orientation. Keep background proportional to the audience's actual need.
 
-## 3. Create the slide map
+## 3. Create and show the slide map
 
 For every slide specify:
 
@@ -44,23 +44,29 @@ For every slide specify:
 
 For the 3/5/10-minute defaults, design for a fast visual rhythm: many slides should advance in roughly 15–35 seconds, while a small number of core method, evidence, or demo slides may take 35–60 seconds. Cover, hook, transition, and closing pages may advance faster. For longer talks, derive a slower time ledger from the prompt. If the deck doubles as a handout, put detail in speaker notes or an appendix rather than shrinking body text.
 
+Present this outline before image generation. Pause for confirmation unless the user explicitly authorized automatic continuation. Correct any structural issue, then freeze the story lock. All three visual concepts inherit it unchanged.
+
 ## 4. Prepare evidence and assets
 
-Extract figures/tables from provided sources at adequate resolution. Rebuild charts when the underlying data are available. Recreate simple diagrams with editable shapes; preserve complex scientific figures as images with clear citations. For theme-led pitches, generate only planned text-free hero visuals, backgrounds, characters, motifs, or product-world scenes, leaving intentional text-safe zones. Maintain a private ledger connecting each claim or visual to its source.
+Extract figures/tables from provided sources at adequate resolution. Preserve source data for later editable reconstruction. Maintain a private ledger connecting each claim or visual to its source.
 
-## 5. Author with a reusable system
+## 5. Generate three complete concept decks
 
-Create global theme tokens, header/footer helpers, title treatments, card styles, table styles, chart colors, spacing constants, and page-number logic. Use these primitives consistently. Build central compositions from content needs rather than forcing a single repeated grid.
+Follow `three-concept-preview.md`. Create three style bibles, validate cover/dense/data keyframes, then generate every slide for A/B/C. Build three deterministic contact sheets and verify that slide count/order/content are identical.
 
-For the academic route, do not generate the full deck immediately. First build one representative dense calibration slide using `academic-template-fidelity.md`. Render it and verify the signature top banner, bottom band, title lockup, rounded components, table/card morphology, and content density. Freeze the corrected helpers only after this slide passes; then build the rest of the deck.
+Deliver the outline, three boards, and a concise comparison. Pause for selection.
 
-## 6. Validate version 1
+## 6. Build selected version 1
 
-Render every slide. Inspect each at full size and inspect a montage for rhythm. Run overflow checks. Export PDF, render the PDF, and compare representative slides against the PPTX render. For an academic deck, compare at least three full-size slides and the montage with `academic-template-fidelity.md`; missing frame elements or generic square/table styling require regeneration. Apply the full rubric in `qa-rubric.md`.
+- Academic: follow `image-to-editable-reconstruction.md`; pass one dense calibration slide, then reconstruct the whole deck.
+- Hackathon/creative/full-image: place each approved full-slide image edge-to-edge in PPTX; do not weaken it by partial generic reconstruction.
+- Explicit editable creative pitch: use the academic reconstruction mechanics with the selected creative style bible.
+
+Render every slide, inspect each at full size and as a montage, run overflow checks, export PDF, and compare PPTX/PDF. Apply `qa-rubric.md`.
 
 ## 7. Deliver and elicit
 
-Deliver the editable PPTX and PDF preview together. Summarize only important assumptions or source limitations. Then ask 5–9 tailored questions selected from `intake-and-iteration.md`; offer recommended defaults where useful.
+Deliver the selected-route PPTX and PDF preview together. Summarize important assumptions, reconstruction exceptions, or source limitations. Then ask 5–9 tailored questions and propose the highest-value improvements.
 
 ## 8. Produce version 2
 

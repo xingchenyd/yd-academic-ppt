@@ -1,6 +1,6 @@
 # Theme-led pitch visual systems
 
-This reference governs editable theme-led pitches. If the user explicitly requests complete AI-rendered poster slides or accepts non-editable full-image output, switch to `poster-impact-mode.md` instead.
+This reference governs the visual worlds and narrative expression of theme-led pitches. The default hackathon/creative final output keeps the selected full-slide images and follows `poster-impact-mode.md` for assembly. If the user explicitly requests editable creative output, reconstruct the selected concept with `image-to-editable-reconstruction.md` while preserving this visual system.
 
 ## Core principle
 
